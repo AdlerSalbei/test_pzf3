@@ -1,5 +1,15 @@
 
 class Mode_SemiAuto;
+class test_pzf3ScriptedOptic {
+    reticleTexture = QPATHTOF(data\images\stp.paa);
+    reticleTextureSize = 0.4;
+
+    //bodyTexture = "\bwa3_pzf3\data\reticles\bwa3_pzf3-body_ca.paa";
+    //bodyTextureNight = "\bwa3_pzf3\data\reticles\bwa3_pzf3-bodyNight_ca.paa";
+    //bodyTextureSize = 1.95;
+};
+
+
 class CfgWeapons
 {
 	class Launcher;
@@ -19,16 +29,19 @@ class CfgWeapons
 		picture = "";
 		UiPicture = "";
 		cameraDir = "look";
-		modelOptics = "\a3\Weapons_F_Tank\acc\reticle_MRAWSNew.p3d";
+
+		modelOptics = "\x\cba\addons\optics\cba_optic_big_90.p3d";
+		class CBA_ScriptedOptic: test_pzf3ScriptedOptic {};
+        weaponInfoType = "CBA_ScriptedOptic";
+
 		magazines[] = {"PZF3_HEAT_DM12A1","PZF3_DM32","PZF3_HEAT_DM22"};
-		magazineReloadSwitchPhase = 0.48;
+		magazineReloadSwitchPhase = 0.3;
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};
 		handAnim[] = {"OFP2_ManSkeleton", QPATHTOF(data\anim\test_pzf3_handanim.rtm)};
 		reloadAction = "ReloadRPG";
 		recoil = "recoil_rpg";
 		maxZeroing = 500;
-		weaponInfoType = "RscOpticsRangeFinderMRAWS";
 		shotPos = "muzzlePos";
 		shotEnd = "muzzleEnd";
 		class GunParticles
@@ -88,7 +101,7 @@ class CfgWeapons
 		canLock = 0;
 		weaponLockDelay = 3;
 		lockAcquire = 0;
-		inertia = 0.8;
+		inertia = 1;
 		aimTransitionSpeed = 0.5;
 		dexterity = 1.2;
 		ACE_barrelTwist = "16,8";
