@@ -2,7 +2,9 @@
 class Mode_SemiAuto;
 class test_pzf3ScriptedOptic {
     reticleTexture = QPATHTOF(data\images\stp.paa);
-    reticleTextureSize = 0.4;
+    reticleTextureSize = 0.6;
+	minMagnificationReticleScale = 2;
+	maxMagnificationReticleScale = 2;
 
     //bodyTexture = "\bwa3_pzf3\data\reticles\bwa3_pzf3-body_ca.paa";
     //bodyTextureNight = "\bwa3_pzf3\data\reticles\bwa3_pzf3-bodyNight_ca.paa";
@@ -35,7 +37,7 @@ class CfgWeapons
         weaponInfoType = "CBA_ScriptedOptic";
 
 		magazines[] = {"PZF3_HEAT_DM12A1","PZF3_DM32","PZF3_HEAT_DM22"};
-		magazineReloadSwitchPhase = 0.3;
+		magazineReloadSwitchPhase = 0.48;
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};
 		handAnim[] = {"OFP2_ManSkeleton", QPATHTOF(data\anim\test_pzf3_handanim.rtm)};

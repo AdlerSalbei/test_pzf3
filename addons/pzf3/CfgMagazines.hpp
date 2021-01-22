@@ -26,8 +26,8 @@ class CfgMagazines
 		displayName = "Rocket BUNKERFAUST DM32";
 		displaynameShort = "";
 		descriptionShort = "";
-		model = QPATHTOF(data\p3d\ammo\rocket_pzf3_dm32_item);
-		modelSpecial = QPATHTOF(data\p3d\proxys\mag_pzf3_dm32_1rnd);
+		model = QPATHTOF(data\p3d\mags\mag_pzf3_dm32_1rnd.p3d);
+		modelSpecial = QPATHTOF(data\p3d\mags\mag_pzf3_dm32_1rnd.p3d);
 		modelSpecialIsProxy = 1;
 		picture = "";
 		initSpeed = 152;
@@ -42,8 +42,8 @@ class CfgMagazines
 		displayName = "Rocket TANDEM HEAT DM22";
 		displaynameShort = "";
 		descriptionShort = "";
-		model = QPATHTOF(data\p3d\ammo\rocket_pzf3_heat_dm22_item);
-		modelSpecial = QPATHTOF(data\p3d\proxys\mag_pzf3_heat_dm22_1rnd);
+		model = QPATHTOF(data\p3d\mags\mag_pzf3_heat_dm22_1rnd.p3d);
+		modelSpecial = QPATHTOF(data\p3d\mags\mag_pzf3_heat_dm22_1rnd.p3d);
 		modelSpecialIsProxy = 1;
 		picture = "";
 		initSpeed = 149;
