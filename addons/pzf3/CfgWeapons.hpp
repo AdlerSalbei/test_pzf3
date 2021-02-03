@@ -2,13 +2,9 @@
 class Mode_SemiAuto;
 class test_pzf3ScriptedOptic {
     reticleTexture = QPATHTOF(data\images\stp.paa);
-    reticleTextureSize = 0.6;
-	minMagnificationReticleScale = 2;
-	maxMagnificationReticleScale = 2;
-
-    //bodyTexture = "\bwa3_pzf3\data\reticles\bwa3_pzf3-body_ca.paa";
-    //bodyTextureNight = "\bwa3_pzf3\data\reticles\bwa3_pzf3-bodyNight_ca.paa";
-    //bodyTextureSize = 1.95;
+    reticleTextureSize = 1;
+	minMagnificationReticleScale = 2.5;
+	maxMagnificationReticleScale = 2.5;
 };
 
 
@@ -28,7 +24,7 @@ class CfgWeapons
 		descriptionShort = "";
 		overviewPicture = "";
 		model = QPATHTOF(data\p3d\pzf3.p3d);
-		picture = "";
+		picture = QPATHTOF(data\images\pzf3_icon.paa);
 		UiPicture = "";
 		cameraDir = "look";
 
@@ -59,25 +55,25 @@ class CfgWeapons
 		{
 			libTextDesc = "";
 		};
-		class OpticsModes
-		{
-			class StepScope
-			{
-				opticsID = 1;
-				useModelOptics = 1;
-				opticsZoomMin = 0.0875;
-				opticsZoomMax = 0.0875;
-				opticsZoomInit = 0.0875;
-				distanceZoomMin = 300;
-				distanceZoomMax = 300;
-				memoryPointCamera = "eye";
-				opticsFlare = 1;
-				opticsDisablePeripherialVision = 1;
-				cameraDir = "look";
-				visionMode[] = {"Normal","NVG"};
-				opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1"};
-			};
-		};
+		class OpticsModes {
+            class optic {
+                opticsID = 1;
+                useModelOptics = 1;
+                opticsZoomMin = "0.25 / 2.5";
+                opticsZoomMax = "0.25 / 2.5";
+                opticsZoomInit = "0.25 / 2.5";
+                distanceZoomMin = 200;
+                distanceZoomMax = 200;
+                memoryPointCamera = "eye";
+                opticsFlare = 1;
+                opticsDisablePeripherialVision = 1;
+                cameraDir = "look";
+                discreteDistance[] = {200};
+                discreteDistanceInitIndex = 0;
+                visionMode[] = {"Normal"};
+                opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1"};
+            };
+        };
 		modes[] = {"Single"};
 		class Single: Mode_SemiAuto
 		{

@@ -20,20 +20,24 @@ class CfgAmmo
 		indirectHitRange = 3;
 		explosive = 0.8;
 		cost = 100;
-		airFriction = 0.05;
+		airFriction = 0;
 		sideAirFriction = 0;
-		maxSpeed = 350;
+		maxSpeed = 248;
 		initTime = 0;
-		thrustTime = 0.1;
-		thrust = 0.1;
-		fuseDistance = 15;
+		thrustTime = 0.5;
+		thrust = 2000;
+		fuseDistance = 5;
 		simulationStep = 0.02;
 		airLock = 0;
 		aiAmmoUsageFlags = "128 + 512";
 		irLock = 0;
 		timeToLive = 25;
 		maneuvrability = 0;
-		allowAgainstInfantry = 1;
+		allowAgainstInfantry = 0;
+		CraterEffects = "ATMissileCrater";
+        explosionEffects = "ATMissileExplosion";
+        effectsMissileInit = "";
+        effectsMissile = "EmptyEffect";
 		class CamShakeExplode
 		{
 			power = 11;
@@ -62,23 +66,21 @@ class CfgAmmo
 			frequency = 20;
 			distance = 1;
 		};
-		/*
 		ACE_caliber = 110;
 		ACE_bulletLength = 1200;
 		ACE_bulletMass = 3900;
-		*/
 	};
 	class R_PZF3_DM32: R_PZF3_HEAT_DM12A1
 	{
 		model = QPATHTOF(data\p3d\ammo\rocket_pzf3_dm32);
 		displayName = "DM32 Bunkerfaust";
-		warheadName = "HE";
-		submunitionAmmo = "";
-		submunitionDirectionType = "";
-		submunitionInitSpeed = 0;
-		submunitionParentSpeedCoef = 0;
-		submunitionInitialOffset[] = {0, 0, 0};
-		triggerOnImpact = 0;
+		warheadName = "TandemHEAT";
+        ssubmunitionAmmo = "ammo_Penetrator_MRAAWS";
+        submunitionDirectionType = "SubmunitionModelDirection";
+        submunitionInitSpeed = 1000;
+        submunitionParentSpeedCoef = 0.0;
+        submunitionInitialOffset[] = {0,0,0.3};
+        triggerOnImpact = 1;
 		hit = 200;
 		indirectHit = 50;
 		indirectHitRange = 6;

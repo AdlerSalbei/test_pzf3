@@ -28,6 +28,6 @@ class CfgVehicles {
         editorSubcategory = "EdSubcat_Military";
         scopecurator = 2;
         scope = 2;
-		    model = QPATHTOF(data\p3d\mags\mag_pzf3_heat_dm22_1rnd.p3d);
+		model = QPATHTOF(data\p3d\mags\mag_pzf3_heat_dm22_1rnd.p3d);
     };
 };
