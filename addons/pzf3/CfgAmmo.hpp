@@ -1,14 +1,39 @@
 class CfgAmmo
 {
-	class R_MRAAWS_HEAT_F;
-	class R_MRAAWS_HE_F;
-	class R_MRAAWS_HEAT55_F;
-	class R_PZF3_HEAT_DM12A1: R_MRAAWS_HEAT_F
+	class ammo_Penetrator_Base;
+	class R_PzF3_ammo_Penetrator_DM12A1: ammo_Penetrator_Base 
+	{
+        caliber = 50;
+        warheadName = "TandemHEAT";
+        hit = 600;
+    };
+
+    class R_PzF3_ammo_Penetrator_DM22: ammo_Penetrator_Base 
+	{
+        caliber = 60;
+        warheadName = "TandemHEAT";
+        hit = 650;
+    };
+
+	class R_PzF3_ammo_Penetrator_DM32: ammo_Penetrator_Base 
+	{
+        caliber = 33.3333;
+        warheadName = "TandemHEAT";
+        indirectHit = 600;
+        indirectHitRange = 5;
+        explosive = 1;
+        hit = 600;
+        explosionEffects = "MineNondirectionalExplosion";
+        craterEffects = "MineNondirectionalCrater";
+    };
+
+	class RocketBase;
+	class R_PZF3_HEAT_DM12A1: RocketBase
 	{
 		model = QPATHTOF(data\p3d\ammo\rocket_pzf3_heat_dm12a1);
 		displayName = "DM12 Monohohlladung";
 		warheadName = "TandemHEAT";
-		submunitionAmmo = "ammo_Penetrator_MRAAWS";
+		submunitionAmmo = "R_PzF3_ammo_Penetrator_DM12A1";
 		submunitionDirectionType = "SubmunitionModelDirection";
 		submunitionInitSpeed = 1000;
 		submunitionParentSpeedCoef = 0;
@@ -24,7 +49,7 @@ class CfgAmmo
 		sideAirFriction = 0;
 		maxSpeed = 248;
 		initTime = 0;
-		thrustTime = 0.5;
+		thrustTime = 0.01;
 		thrust = 2000;
 		fuseDistance = 5;
 		simulationStep = 0.02;
@@ -75,7 +100,7 @@ class CfgAmmo
 		model = QPATHTOF(data\p3d\ammo\rocket_pzf3_dm32);
 		displayName = "DM32 Bunkerfaust";
 		warheadName = "TandemHEAT";
-        ssubmunitionAmmo = "ammo_Penetrator_MRAAWS";
+        submunitionAmmo = "R_PzF3_ammo_Penetrator_DM32";
         submunitionDirectionType = "SubmunitionModelDirection";
         submunitionInitSpeed = 1000;
         submunitionParentSpeedCoef = 0.0;
@@ -103,6 +128,7 @@ class CfgAmmo
 	{
 		model = QPATHTOF(data\p3d\ammo\rocket_pzf3_heat_dm22);
 		displayName = "DM22 Tandemhohlladung";
+		submunitionAmmo = "R_PzF3_ammo_Penetrator_DM22";
 		hit = 650;
 		ACE_caliber = 110;
 		ACE_bulletLength = 1200;

@@ -1,4 +1,4 @@
-#include 
+#include "script_component.hpp"
 
 /*
 * Checks if player can extend the AT
