@@ -1,4 +1,3 @@
-
 class Mode_SemiAuto;
 class test_pzf3ScriptedOptic {
     reticleTexture = QPATHTOF(data\images\stp.paa);
@@ -6,7 +5,6 @@ class test_pzf3ScriptedOptic {
 	minMagnificationReticleScale = 2.5;
 	maxMagnificationReticleScale = 2.5;
 };
-
 
 class CfgWeapons
 {
