@@ -30,7 +30,8 @@ class CfgAmmo
 	class RocketBase;
 	class R_PZF3_HEAT_DM12A1: RocketBase
 	{
-		model = QPATHTOF(data\p3d\ammo\rocket_pzf3_heat_dm12a1);
+		//model = QPATHTOF(data\p3d\ammo\rocket_pzf3_heat_dm12a1);
+		model = QPATHTOF(data\p3d\rocket_pzf3_heat_dm12a1);
 		displayName = "DM12 Monohohlladung";
 		warheadName = "TandemHEAT";
 		submunitionAmmo = "R_PzF3_ammo_Penetrator_DM12A1";
@@ -97,7 +98,8 @@ class CfgAmmo
 	};
 	class R_PZF3_DM32: R_PZF3_HEAT_DM12A1
 	{
-		model = QPATHTOF(data\p3d\ammo\rocket_pzf3_dm32);
+		//model = QPATHTOF(data\p3d\ammo\rocket_pzf3_dm32);
+		model = QPATHTOF(data\p3d\rocket_pzf3_dm32);
 		displayName = "DM32 Bunkerfaust";
 		warheadName = "TandemHEAT";
         submunitionAmmo = "R_PzF3_ammo_Penetrator_DM32";
@@ -126,7 +128,8 @@ class CfgAmmo
 	};
 	class R_PZF3_HEAT_DM22: R_PZF3_HEAT_DM12A1
 	{
-		model = QPATHTOF(data\p3d\ammo\rocket_pzf3_heat_dm22);
+		//model = QPATHTOF(data\p3d\ammo\rocket_pzf3_heat_dm22);
+		model = QPATHTOF(data\p3d\rocket_pzf3_heat_dm22);
 		displayName = "DM22 Tandemhohlladung";
 		submunitionAmmo = "R_PzF3_ammo_Penetrator_DM22";
 		hit = 650;
